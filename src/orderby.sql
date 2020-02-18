@@ -1,0 +1,16 @@
+-- Order by
+SELECT col1, col2, ...
+  FROM TB_NAME
+  WHERE CONDITIONS
+  ORDER BY col1 ASC/DESC
+;
+
+-- Limit offset
+SELECT col1, col2, ...
+  FROM TB_NAME
+  WHERE CONDITIONS
+  ORDER BY col1 ASC/DESC
+  LIMIT NUM_LIMIT
+  OFFSET NUM_OFFSET
+;
+

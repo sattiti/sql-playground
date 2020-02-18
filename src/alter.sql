@@ -1,0 +1,14 @@
+-- ALTER
+
+-- Drop Column
+ALTER TABLE TB
+  DROP COL1, COL2, ...;
+
+-- Add Column
+ALTER TABLE TB
+  ADD COL TYPE OPTIONAL_TABLE_CONSTRAINT DEFAULT DEFAULT_VALUE;
+
+-- Rename
+ALTER TABLE mytable
+RENAME TO new_table_name;
+

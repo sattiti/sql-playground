@@ -1,0 +1,6 @@
+-- INSERT
+
+INSERT INTO TB
+  (COL1, COL2, ...)
+  VALUES (VAL1, VAL2, ...)
+;
