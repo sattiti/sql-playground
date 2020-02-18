@@ -6,6 +6,8 @@
 -- 4. HAVING
 -- 5. SELECT
 -- 6. ORDER BY
+-- HAVING は GROUP BY で集合した内容に対して条件を指定する。
+-- 定数 | 集約関数 | GROUP BY で指定したカラム名、この3つしか指定できない。
 
 SELECT COL
   FROM
@@ -15,5 +17,5 @@ SELECT COL
   GROUP BY
     COL
   HAVING
-    GROUP_CONDITION
+    定数 | 集約関数 | GROUP BY で指定したカラム名
 ;

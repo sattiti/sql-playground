@@ -1,0 +1,30 @@
+-- TRANSACTION
+-- INSERT, UPDATE, DELETE 処理の1塊はトランザクションという。
+-- 	ROLLBACK は、現在のトランザクションの変更を取消す。保存せず終了。
+-- Oracle, DB2
+なし
+-- mysql
+START TRANSACTION;
+-- postgres, SQLServer
+BEGIN TRANSACTION;
+処理...
+COMMIT | ROLLBACK;
+
+
+-- INSERT
+-- mysql
+START TRANSACTION;
+-- psql
+BEGIN TRANSACTION;
+INSERT INTO {TB_NAME}
+  (COL_NAME1, ...)
+  VALUES (VAL1, ...);
+COMMIT;
+
+-- 他のテーブルから挿入する
+BEGIN TRANSACTION;
+INSERT INTO {TB_NAME1}
+  (COL_NAME1, ...)
+  SELECT {COL_NAME1}, ...
+  FROM {TB_NAME2};
+COMMIT;

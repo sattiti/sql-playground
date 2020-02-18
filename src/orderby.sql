@@ -1,4 +1,6 @@
 -- Order by
+-- 複数カラムをソートする場合、右から左順にソートして行く。
+-- SORT BY COUNT(*) のように集約関数の使用も可能。
 SELECT col1, col2, ...
   FROM TB_NAME
   WHERE CONDITIONS

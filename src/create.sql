@@ -1,17 +1,6 @@
 -- CREATE
-
--- TYPE {{{
--- BOOLEAN
--- INTEGER
--- FLOAT
--- DOUBLE
--- REAL	
--- CHARACTER(NUM_CHARS)
--- VARCHAR(NUM_CHARS)
--- TEXT
--- DATE
--- DATETIME
--- BLOB                  Binary
+-- Create db {{{
+CREATE DATABASE {DATABASE_NAME};
 -- }}}
 
 -- TABLE_CONSTRAINT {{{
