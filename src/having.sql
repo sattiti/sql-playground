@@ -19,3 +19,13 @@ SELECT COL
   HAVING
     定数 | 集約関数 | GROUP BY で指定したカラム名
 ;
+
+-- example
+SELECT type, AVG(price)
+  FROM
+    products
+  GROUP BY
+    type
+  HAVING
+    AVG(price) > 3500
+;
