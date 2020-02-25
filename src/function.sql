@@ -29,7 +29,7 @@ SELECT
 -- LOWER(str)
 -- UPPER(str)
 -- REPLACE(str, a, b)
--- SUBSTRING(str FROM n FOR m)
+-- SUBSTRING(str, FROM, TO)
 
 -- CONCAT {{{
 str1 || str2 AS NEW_STR;
