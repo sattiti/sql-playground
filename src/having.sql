@@ -8,6 +8,7 @@
 -- 6. ORDER BY
 -- HAVING は GROUP BY で集合した内容に対して条件を指定する。
 -- 定数 | 集約関数 | GROUP BY で指定したカラム名、この3つしか指定できない。
+-- HAVING より WHERE のほうが高速。
 
 SELECT COL
   FROM
