@@ -1,6 +1,21 @@
 -- CASE
 -- 各分岐の戻り値の型が一致する必要がある。
 -- 集約関数と GROUP BY 句と一緒に使うと効果絶大。
+
+-- CASE はどこにでも書ける。
+-- SELECT
+-- WHERE
+-- UPDATE
+-- GROUP BY
+-- HAVING
+-- ORDER BY
+-- PARTITION BY
+-- CHECK
+-- 関数の引数
+-- 述語の引数
+-- 他の式の中(CASE 入れ子等
+
+-- CASE 入れ子
 -- Simple CASE {{{
 SELECT 
   CASE COL
