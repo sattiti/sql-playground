@@ -41,7 +41,7 @@ SELECT {COL1}, {COL2}
 -- _ 任意の1文字
 -- }}}
 
--- NULL 比較演算子 {{{
+-- NULL 演算子 {{{
 -- IS NULL
 -- IS NOT NULL
 -- }}}

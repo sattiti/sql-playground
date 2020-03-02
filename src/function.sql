@@ -44,7 +44,7 @@ CONCAT(str1, str2) AS NEW_STR;
 -- RANK()
 -- DENSE_RANK() 同順位があっても、順位が飛ばない。
 -- ROW_NUMBER() 同順位があっても、連番で続く。
--- GROUPING()   超集合行なら、1 それ以外 0
+-- GROUPING()   NULL なら、1 それ以外 0
 
 -- CURRENT_DATE;
 -- CURRENT_TIME;
