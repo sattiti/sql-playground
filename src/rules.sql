@@ -61,3 +61,7 @@
 -- FALSE 偽
 -- UNKNOWN 不明 undefined のようなもの。
 -- }}}
+
+-- IN, EXISTS のパフォーマンスについて {{{
+-- IN より EXISTS のほうが高速。
+-- }}}

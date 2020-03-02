@@ -1,7 +1,43 @@
 -- CASE
-CASE
-    WHEN condition1 THEN result1
-    WHEN condition2 THEN result2
-    WHEN conditionN THEN resultN
-    ELSE result
-END;
+-- 各分岐の戻り値の型が一致する必要がある。
+-- 集約関数と GROUP BY 句と一緒に使うと効果絶大。
+-- Simple CASE {{{
+SELECT 
+  CASE COL
+    WHEN VAL1 THEN RESULT1
+    WHEN VAL2 THEN RESULT2
+    ELSE RESULT3
+  END AS ALIAS1
+  FROM TB
+  GROUP BY
+    CASE COL
+      WHEN VAL1 THEN RESULT1
+      WHEN VAL2 THEN RESULT2
+      ELSE RESULT3
+    END
+;
+-- }}}
+
+-- Searched CASE {{{
+SELECT
+  CASE
+    WHEN CONDITION1 THEN RESULT1
+    WHEN CONDITION2 THEN RESULT2
+    ELSE RESULT3
+  END AS ALIAS1
+  FROM TB
+  GROUP BY ALIAS1
+;
+-- }}}
+
+-- UPDATE {{{
+UPDATE TB
+  SET COL =
+    CASE
+      WHEN COLDITION1 THEN RESULT1
+      WHEN COLDITION2 THEN RESULT2
+      ELSE RESULT3
+    END
+;
+      
+-- }}}
