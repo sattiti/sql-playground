@@ -2,7 +2,9 @@
 -- OLAP (OnLine Analytical Processing)
 -- データベースを使ってリアルタイムでにデータ分析をする。
 -- レコードを集約せず、入力と同じ数のレコードを返す。
--- PARTITION BY 句に指定した COL をもとにレコードを分割する。
+-- PARTITION BY 句による、レコード集合の分割。
+-- ORDER BY によるレコードの順序付け。
+-- フレームによるカレントレコードを中心したサブセットの定義。
 
 
 -- window 関数として使える代表的な関数。
@@ -20,15 +22,18 @@
 
 
 -- FRAME 句(開始点と終了点の指定)
--- {RANGE |ROW}
--- {BETWEEN .. AND ..}
-
+-- ROWS                移動単位を行で設定する。
+-- RANGE               移動単位を列の値で設定する。基準となる列は ORDER BY 句で指定された列。
 -- UNBOUNDED PRECEDING 先頭の行(終了点では使用不可)
 -- UNBOUNDED FOLLOWING 末尾の行(開始点では使用不可)
--- CURRENT ROW 現在行
--- n PRECEDING 現在行より n 行前まで、RANGE の場合は、n 値の前。
--- n FOLLOWING 現在行より n 行後まで、RANGE の場合は、 n 値の後。
--- ROWS 2 PRECEDING 2行前までという意味。
+-- CURRENT ROW         現在行
+-- n PRECEDING         現在行より n 行前まで、RANGE の場合は、n 値の前。
+-- n FOLLOWING         現在行より n 行後まで、RANGE の場合は、 n 値の後。
+
+-- example:
+-- ROWS BETWEEN 2 FOLLOWING AND 2 FOLLOWING 2行先。
+-- ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING 1行前。
+
 
 -- 無名 WINDOW FUNCTION{{{
 SELECT
