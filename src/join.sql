@@ -1,6 +1,9 @@
 -- JOIN
 https://www.w3schools.com/sql/sql_join.asp
 
+-- SELF JOIN
+-- 同一テーブルを対象に行うと結合は、重複順列、順列、組み合わせを得ることができる。
+
 -- INNER JOIN (内部結合) {{{
 -- Returns records that have matching values in both tables.
 SELECT *
@@ -82,5 +85,13 @@ SELECT *
     a.key = b.key
   WHERE
     a.key IS NULL OR b.key IS NULL
+;
+-- }}}
+-- CROSS JOIN (交差結合) {{{
+SELECT *
+  FROM
+    LEFT_TABLE_A AS a
+  CROSS JOIN
+    RIGHT_TABLE_B AS b
 ;
 -- }}}
