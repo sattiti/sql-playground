@@ -59,5 +59,5 @@ CONCAT(str1, str2) AS NEW_STR;
 
 -- CAST(val AS type) AS var;
 
--- NULL を値に変換。
--- COALESCE(str1, str2)
+-- NULL を別の値に置換。
+-- COALESCE(COL, NEW_VAL)
