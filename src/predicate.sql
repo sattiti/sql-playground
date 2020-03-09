@@ -1,4 +1,4 @@
--- Operator
+-- Predicate
 
 -- 比較演算子 {{{
 -- =           equal
@@ -9,39 +9,42 @@
 -- >=          greater then equal
 -- }}}
 
--- LIKE {{{
+-- predicate logic (述語) {{{
+-- LIKE
 -- search for a pattern
 SELECT * FROM {TB}
   WHERE {COL} LIKE ‘str%’;
--- }}}
 
--- IN
+-- DISITINCT
+-- 重複除外
 
--- BETWEEN .. AND .. {{{
+-- BETWEEN .. AND ..
 -- between a certain range
 SELECT {COL1}, {COL2}
   FROM {TB}
   WHERE {COL} BETWEEN val1 AND val2;
--- }}}
 
--- EXISTS {{{
--- IS NULL, IS NOT NULL
+
+-- IS NULL
+-- IS NOT NULL
+
 -- IN
--- EXISTS
--- }}}
+-- NOT IN
 
--- 論理演算子 {{{
+-- EXISTS
+-- NOT EXISTS
+
+-- 論理演算子
 -- AND
 -- OR
 -- NOT
--- }}}
 
--- Predicate 述語 {{{
--- % 0以上の任意文字
--- _ 任意の1文字
--- }}}
+-- ALL
+-- ANY
 
--- NULL 演算子 {{{
--- IS NULL
--- IS NOT NULL
+-- %
+-- 0以上の任意文字
+-- _
+-- 任意の1文字
+
 -- }}}
