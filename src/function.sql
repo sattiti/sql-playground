@@ -1,6 +1,10 @@
 -- WHERE 句に使えない。
 -- COUNT(*)
+-- within NULL result.
+
 -- COUNT(COLUMN)
+-- without NULL result.
+
 -- SUM(COLUMN)
 -- AVG(COLUMN)
 -- MAX(COLUMN)
