@@ -65,3 +65,32 @@ CONCAT(str1, str2) AS NEW_STR;
 
 -- NULL を別の値に置換。
 -- COALESCE(COL, NEW_VAL)
+
+-- よく使う {{{
+-- COUNT(DISTINCT COL) = COUNT(COL)
+-- COL の値が一意である。
+
+-- COUNT(*) = COUNT(COL)
+-- COL に NULL が存在しない。
+
+-- COUNT(*) = MAX(COL)
+-- COL は歯抜けのない連番。(開始値は1)
+
+-- COUNT(*) = MAX(COL) - MIN(COL) + 1
+-- COL は歯抜けのない連番。(開始値は任意の整数)
+
+-- MIN(COL) = MAX(COL)
+-- COL の値は1つかまたは NULL である。
+
+-- MIN(COL) * MAX(COL) > 0
+-- 全てのCOL_X の符号が同じである。
+
+-- MIN(COL) * MAX(COL) < 0
+-- 最大値の符号が正で、最小値の符号は負である。
+
+-- MAX(ABS(COL)) = 0
+-- COL は少なくても1つのゼロを含む。
+
+-- MIN(COL - 定数) = - MAX(COL - 定数)
+-- COL の最大値と最小値が指定した定数から同じ幅の距離にある。
+-- }}}
